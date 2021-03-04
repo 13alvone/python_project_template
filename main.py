@@ -3,6 +3,9 @@ import argparse
 import math
 import time
 
+# Global Variables
+start_time = time.time()
+
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -20,16 +23,18 @@ def print_elapsed_time(_start_time):
     if len(f'{remaining_seconds}') != 2:
         remaining_seconds = f'0{remaining_seconds}'
     elapsed_time = f'{minutes}:{remaining_seconds}'
-    msg = '**** Total_Time Elapsed: ' + elapsed_time + ' =======================\n\n'
+    msg = '{"*" * 3} Total_Time Elapsed: ' + elapsed_time + ' {"*" * 20}\n\n'
     print(msg)
 
 
 def main():
+    global start_time
     args = parse_args()
     ip = args.ip
     port = args.port
     username = args.username
     # Do Stuff Here and Modify Above argparse with options as necessary.
+    print_elapsed_time(
 
 
 if __name__ == '__main__':
