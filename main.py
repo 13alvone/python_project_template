@@ -34,7 +34,7 @@ def main():
     port = args.port
     username = args.username
     # Do Stuff Here and Modify Above argparse with options as necessary.
-    print_elapsed_time(
+    print_elapsed_time(start_time)
 
 
 if __name__ == '__main__':
